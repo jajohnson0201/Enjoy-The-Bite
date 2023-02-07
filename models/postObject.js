@@ -1,12 +1,26 @@
 const { Model, DataTypes } = require('sequelize');
-const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
 
 class PostObject extends Model {}
 
 PostObject.init(
     {
-        userName: {}
+        postID: {
+            type: DataTypes.INTEGER,
+        },
+        userName: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        reviewBody: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        }
+    },
+    {
+        sequelize,
+        underscored: true,
+        modelName: 'postobject'
     }
 );
 
