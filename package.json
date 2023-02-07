@@ -1,0 +1,20 @@
+{
+  "name": "enjoy-the-bite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jajohnson0201/Enjoy-The-Bite.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jajohnson0201/Enjoy-The-Bite/issues"
+  },
+  "homepage": "https://github.com/jajohnson0201/Enjoy-The-Bite#readme"
+}
