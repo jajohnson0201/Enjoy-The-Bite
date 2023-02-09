@@ -1,5 +1,6 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
+const PostObject = require('./postObject');
 
 class Restaurant extends Model {}
 
@@ -16,27 +17,20 @@ Restaurant.init(
             allowNull: false,
             unique: true,
         },
-        rating: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            validate: {
-                len: [5],
-            },
-        },
         foodRating: {
             type: DataTypes.INTEGER,
             allowNull: false,
             validate: {
-                len: [5],
+                max: [5],
             },
         },
         locationRation: {
             type: DataTypes.INTEGER,
             allowNull: false,
             validate: {
-                len: [5],
+                max: [5],
             },
-        }
+        },
     },
     {   
         sequelize,

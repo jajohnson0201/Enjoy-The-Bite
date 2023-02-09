@@ -7,6 +7,16 @@ PostObject.init(
     {
         postID: {
             type: DataTypes.INTEGER,
+            allowNull: false,
+            primaryKey: true,
+        },
+        userID: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            references: {
+                model: 'user',
+                key: 'id',
+              },
         },
         userName: {
             type: DataTypes.STRING,
@@ -15,6 +25,14 @@ PostObject.init(
         reviewBody: {
             type: DataTypes.STRING,
             allowNull: false,
+        },
+        resaurantID: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            references: {
+                model: 'restaurant',
+                key: 'id',
+              },
         }
     },
     {
