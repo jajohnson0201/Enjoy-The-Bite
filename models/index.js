@@ -1,6 +1,6 @@
+const User = require("./User");
 const PostObject = require("./postObject");
 const Restaurant = require("./Restaurant");
-const User = require("./User");
 
 User.hasMany(PostObject, {
     foreignKey: 'userID',

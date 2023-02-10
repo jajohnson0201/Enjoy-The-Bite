@@ -1,6 +1,5 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
-const PostObject = require('./postObject');
 
 class Restaurant extends Model {}
 
@@ -35,7 +34,8 @@ Restaurant.init(
     {   
         sequelize,
         underscored: true,
-        modelName: 'restaurant'
+        modelName: 'restaurant',
+        freezeTableName: true
     }
 );
 
