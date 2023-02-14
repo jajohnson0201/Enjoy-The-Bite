@@ -1,79 +1,139 @@
-<body>
-    <main class="d-flex min-vh-100 bg-dark">
-      <div class="container-fluid my-auto">
-        <h1 class="display-2 text-center text-light">New post</h1>
-        <div class="row justify-content-center">
-  
-          <div class="col-12 col-md-10 mb-3 p-4 bg-white">
-            <form>
-              <div class="form-group">
-                <label for="email-input">Restaurnat Name</label>
-                <input type="email" class="form-control" id="email-input" aria-describedby="emailHelp">
-              </div>
-  
-              <div class="form-group">
-                <label for="exampleFormControlSelect1">Rate the Food</label>
-                <select class="form-control" id="exampleFormControlSelect1">
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="exampleFormControlSelect1">Rate the Atmosohere</label>
-                <select class="form-control" id="exampleFormControlSelect1">
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
-                </select>
-              </div>
-  
-              <div class="form-group">
-                <label for="exampleFormControlSelect1">Rate the Location</label>
-                <select class="form-control" id="exampleFormControlSelect1">
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
-                </select>
-              </div>
-              <div class="form-group">
-                  <label for="exampleFormControlSelect1">Overall Rate</label>
-                  <select class="form-control" id="exampleFormControlSelect1">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                  </select>
-                </div>
-              <div class="form-group">
-                <label for="exampleFormControlTextarea1">Restaurnat Review</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-              </div>
-            <form action="upload.php" method="post">
-                <input type="file" name="file" id="file"/>
-            </form>
-              <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
+<div class = "d-flex min-vh-100 bg-light">
+  <div class="container-fluid my-auto">
+    <h1  class="display-2 text-center text-light">New Post</h1>
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-10 mb-3 p-4 bg-white">
+        <form>
+          {{!-- reasturant name --}}
+          <div class="form-group">
+            <label for="input">Restaurnat Name</label>
+            <input type="name" class="form-control" id="name" aria-describedby="emailHelp">
           </div>
-  
-  
-  
-  
-  
-          <div class="col-12 text-center">
-            <!-- back btn -->
-            <h6><a href="./index.html">&larr; Go Back</a></h6>
+  {{!-- Rate the Food --}}
+          <div class="form-group" id="rating-ability-wrapper">
+            <label class="control-label" for="rating">
+              <span class="field-label-header">Rate the Food</span><br>
+              <span class="field-label-info"></span>
+              <input type="hidden" id="selected_rating" name="selected_rating" value="" required="required">
+            </label>
+            <h2 class="bold rating-header" style="">
+              <span class="selected-rating">0</span><small> / 5</small>
+            </h2>
+            <button type="button" class="btnrating btn btn-default btn-lg" data-attr="1" id="rating-star-1">
+              <i class="fa fa-star" aria-hidden="true"></i>
+            </button>
+            <button type="button" class="btnrating btn btn-default btn-lg" data-attr="2" id="rating-star-2">
+              <i class="fa fa-star" aria-hidden="true"></i>
+            </button>
+            <button type="button" class="btnrating btn btn-default btn-lg" data-attr="3" id="rating-star-3">
+              <i class="fa fa-star" aria-hidden="true"></i>
+            </button>
+            <button type="button" class="btnrating btn btn-default btn-lg" data-attr="4" id="rating-star-4">
+              <i class="fa fa-star" aria-hidden="true"></i>
+            </button>
+            <button type="button" class="btnrating btn btn-default btn-lg" data-attr="5" id="rating-star-5">
+              <i class="fa fa-star" aria-hidden="true"></i>
+            </button>
           </div>
+{{!-- Rate the Atmosohere --}}
+          <div class="form-group" id="rating-ability-wrapper">
+            <label class="control-label" for="rating">
+              <span class="field-label-header">Rate the Atmosohere</span><br>
+              <span class="field-label-info"></span>
+              <input type="hidden" id="selected_rating" name="selected_rating" value="" required="required">
+            </label>
+            <h2 class="bold rating-header" style="">
+              <span class="selected-rating">0</span><small> / 5</small>
+            </h2>
+            <button type="button" class="btnrating btn btn-default btn-lg" data-attr="1" id="rating-star-1">
+              <i class="fa fa-star" aria-hidden="true"></i>
+            </button>
+            <button type="button" class="btnrating btn btn-default btn-lg" data-attr="2" id="rating-star-2">
+              <i class="fa fa-star" aria-hidden="true"></i>
+            </button>
+            <button type="button" class="btnrating btn btn-default btn-lg" data-attr="3" id="rating-star-3">
+              <i class="fa fa-star" aria-hidden="true"></i>
+            </button>
+            <button type="button" class="btnrating btn btn-default btn-lg" data-attr="4" id="rating-star-4">
+              <i class="fa fa-star" aria-hidden="true"></i>
+            </button>
+            <button type="button" class="btnrating btn btn-default btn-lg" data-attr="5" id="rating-star-5">
+              <i class="fa fa-star" aria-hidden="true"></i>
+            </button>
+          </div>
+
+{{!-- Rate the Location --}}
+          <div class="form-group" id="rating-ability-wrapper">
+            <label class="control-label" for="rating">
+              <span class="field-label-header">Rate the Location</span><br>
+              <span class="field-label-info"></span>
+              <input type="hidden" id="selected_rating" name="selected_rating" value="" required="required">
+            </label>
+            <h2 class="bold rating-header" style="">
+              <span class="selected-rating">0</span><small> / 5</small>
+            </h2>
+            <button type="button" class="btnrating btn btn-default btn-lg" data-attr="1" id="rating-star-1">
+              <i class="fa fa-star" aria-hidden="true"></i>
+            </button>
+            <button type="button" class="btnrating btn btn-default btn-lg" data-attr="2" id="rating-star-2">
+              <i class="fa fa-star" aria-hidden="true"></i>
+            </button>
+            <button type="button" class="btnrating btn btn-default btn-lg" data-attr="3" id="rating-star-3">
+              <i class="fa fa-star" aria-hidden="true"></i>
+            </button>
+            <button type="button" class="btnrating btn btn-default btn-lg" data-attr="4" id="rating-star-4">
+              <i class="fa fa-star" aria-hidden="true"></i>
+            </button>
+            <button type="button" class="btnrating btn btn-default btn-lg" data-attr="5" id="rating-star-5">
+              <i class="fa fa-star" aria-hidden="true"></i>
+            </button>
+          </div>
+
+{{!-- Overall Rate --}}
+          <div class="form-group" id="rating-ability-wrapper">
+            <label class="control-label" for="rating">
+              <span class="field-label-header">Overall Rate</span><br>
+              <span class="field-label-info"></span>
+              <input type="hidden" id="selected_rating" name="selected_rating" value="" required="required">
+            </label>
+            <h2 class="bold rating-header" style="">
+              <span class="selected-rating">0</span><small> / 5</small>
+            </h2>
+            <button type="button" class="btnrating btn btn-default btn-lg" data-attr="1" id="rating-star-1">
+              <i class="fa fa-star" aria-hidden="true"></i>
+            </button>
+            <button type="button" class="btnrating btn btn-default btn-lg" data-attr="2" id="rating-star-2">
+              <i class="fa fa-star" aria-hidden="true"></i>
+            </button>
+            <button type="button" class="btnrating btn btn-default btn-lg" data-attr="3" id="rating-star-3">
+              <i class="fa fa-star" aria-hidden="true"></i>
+            </button>
+            <button type="button" class="btnrating btn btn-default btn-lg" data-attr="4" id="rating-star-4">
+              <i class="fa fa-star" aria-hidden="true"></i>
+            </button>
+            <button type="button" class="btnrating btn btn-default btn-lg" data-attr="5" id="rating-star-5">
+              <i class="fa fa-star" aria-hidden="true"></i>
+            </button>
+          </div>
+
+{{!-- written review --}}
+          <div class="form-group">
+            <label for="ratereview">Restaurnat Review</label>
+            <textarea class="form-control" id="ratereview" rows="3"></textarea>
+          </div>
+
+{{!-- upload images --}}
+          <form action="upload.php" method="post">
+            <input type="file" name="file" id="file"/>
+          </form>
+          <button type="submit" class="btn btn-primary">Submit></button>
+        </form>
+
+{{!-- back button --}}
+        <div class="col-12 text-center">
+          <h6><a href="./homepage.handlebars">&larr; Go Back</a></h6>
         </div>
       </div>
-    </main>
-  
-  
-  </body>
+    </div>
+  </div>
+</div>
