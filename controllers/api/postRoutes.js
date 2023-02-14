@@ -2,7 +2,7 @@ const router = require("express").Router();
 const { postObject } = require('../../models');
 const authurizeLog = require("../../views/utils/auth");
 
-
+//creating a new post with user id 
 router.post('/', authurizeLog , async (req, res) => {
     try {
       const newPost = await postObject.create({
@@ -15,6 +15,7 @@ router.post('/', authurizeLog , async (req, res) => {
       res.status(400).json(err);
     }
   });
+  //making a delete post wuth the id and users id
   router.delete('/:id', authurizeLog, async (req, res) => {
     try {
       const postData = await postObjec.destroy({
@@ -23,7 +24,7 @@ router.post('/', authurizeLog , async (req, res) => {
           user_id: req.session.user_id,
         },
       });
-  
+  //404 error and a message of no data is found
       if (!posttData) {
         res.status(404).json({ message: 'No data found with this id!' });
         return;
