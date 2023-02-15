@@ -1,6 +1,6 @@
 const router = require("express").Router();
-const { postObject } = require('../../models');
-const authurizeLog = require("../../views/utils/auth");
+const { Review } = require('../../models');
+const authurizeLog = require("../../utils/auth");
 
 //creating a new post with user id 
 router.post('/', authurizeLog , async (req, res) => {

@@ -39,7 +39,8 @@ Review.init(
     {
         sequelize,
         underscored: true,
-        modelName: 'postobject'
+        modelName: 'review',
+        freezeTableName: true
     }
 );
 

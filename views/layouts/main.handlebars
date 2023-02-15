@@ -6,7 +6,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Enjoy The Bite!</title>
-  <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
     integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
@@ -15,6 +14,7 @@
   <link rel="stylesheet" href="/css/jass.css">
 </head>
 <!--Header -->
+
 <body>
   <header class="site-navbar site-navbar-target bg-white" role="banner">
     <div class="container">
@@ -23,9 +23,9 @@
           <nav class="site-navigation text-right ml-auto " role="navigation">
             <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
               {{#if logged_in}}
-              <li class="active"><a href="/views/profile.handlebars" class="nav-link">Profile</a></li>
+              <li class="active"><a href="/profile" class="nav-link">Profile</a></li>
               {{else}}
-              <li><a href="/views/singup.handlebars" class="nav-link">Signup</a></li>
+              <li><a href="/signup" class="nav-link">Signup</a></li>
               {{/if}}
             </ul>
           </nav>
@@ -42,9 +42,9 @@
           <nav class="site-navigation text-left mr-auto " role="navigation">
             <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
               {{#unless logged_in}}
-              <li><a href="/views/layout/main.handlebars" class="nav-link">Login</a></li>
+              <li><a href="/login" class="nav-link">Login</a></li>
               {{else}}
-              <li><a href="/views/homepage.handlebars" class="nav-link">Logout</a></li>
+              <li><a href="/logout" class="nav-link">Logout</a></li>
               {{/unless}}
             </ul>
           </nav>
@@ -63,10 +63,10 @@
       <p>
         <a href="/">Homepage</a>
         {{#if loggedIn}} |
-        <a href="/views/profile.handlebars">Profile</a> |
-        <a href="/views/newPost.handlebars">Create New Post</a>
+        <a href="/profile">Profile</a> |
+        <a href="/Posts">Create New Post</a>
         {{else}}
-        | <a href="/login/">login</a>
+        | <a href="/login">login</a>
         {{/if}}
       </p>
     </div>
