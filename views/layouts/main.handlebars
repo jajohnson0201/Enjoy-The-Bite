@@ -22,9 +22,9 @@
             <div class="col-lg-4">
               <nav class="site-navigation text-right ml-auto " role="navigation">
                 <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
-                    {{ #if logged_in}}
+                    {{!-- {{ #if logged_in}} --}}
                   <li class="active"><a href="/views/profile.handlebars" class="nav-link">Profile</a></li>
-                    {{else}}
+                    {{!-- {{else}} --}}
                   <li><a href ="/views/singup.handlebars" class="nav-link">Signup</a></li>
                 </ul>
               </nav>
@@ -38,9 +38,9 @@
             <div class="col-lg-4">
               <nav class="site-navigation text-left mr-auto " role="navigation">
                 <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
-                    {{else}}
+                    {{!-- {{else}} --}}
                    <li><a href="/views/layout/main.handlebars" class="nav-link">Login</a></li>
-                    {{/if}}
+                    {{!-- {{/if}} --}}
                    <li><a href="/views/homepage.handlebars" class="nav-link">Logout</a></li>
                 </ul>
               </nav>

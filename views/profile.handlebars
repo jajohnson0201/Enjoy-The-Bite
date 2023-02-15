@@ -1,28 +1,33 @@
- <h2 class="text-left p-5">[First Name] Profile</h2>
+ <h2 class="text-left p-5">{{postObject.userName}} Profile</h2>
+        {{#each postObjects as |postObject|}}
         <div class="row row-cols-1 p-5">
             <div class="col-4">
               <div class="card">
                 <div class="card-body">
                   <h5 class="card-title">Personal Info </h5>
-                  <p class="card-text">Name <br>First: </br> Last:</br></p>
-                  <p> Email: <br>Password:</br></p>  
+                  <p class="card-text">Username: {{postObject.userName}}</p>
+                  <p>Email: {{postObject.user.email}}</p>  
                 </div>
               </div>
             </div>
-        </div>   
+        </div>
+        {{/each}}
+
         <h2 class="text-left p-5">Recent Reviews</h2>
+        {{#each postObjects as |postObject|}}
         <div class="row row-cols-1 row-cols-md-4 p-5">
             <div class="col">
               <div class="card">
                 <div class="card-body">
-                  <h5 class="card-title">Restaurant Name</h5>
-                  <p class="card-text">5/5 Stars <br>Write review here.</br></p>
+                  <h5 class="card-title">{{postObject.restaurant.name}}</h5>
+                  <p class="card-text">5/5 &#11088; <br>{{postObject.reviewBody}}</br></p>
                     <div class="row row-cols left">
-                        <div class="col text-center">Food: <br>5</br></div>
-                        <div class="col text-center">Atmosphere: <br>5</br></div>
-                        <div class="col text-center">Location: <br>5</br></div>
+                        <div class="col text-center">Food: <br>{{postObject.restaurant.foodRating}} &#11088;</br></div>
+                        <div class="col text-center">Atmosphere: <br>5 &#11088;</br></div>
+                        <div class="col text-center">Location: <br>{{postObject.restaurant.locationRation}} &#11088;</br></div>
                     </div>
                 </div>
               </div>
             </div>
         </div>
+        {{/each}}
