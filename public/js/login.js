@@ -32,7 +32,7 @@ const signupHandler = async (event) => {
     const password = document.querySelector('#password-signup').value.trim();
 
     if (userName && email && password) {
-        const response = await fetch('api/users', {
+        const response = await fetch('/api/useRoutes', {
             method: 'POST',
             body: JSON.stringify({
                 userName,
@@ -45,7 +45,9 @@ const signupHandler = async (event) => {
         });
 
         if (response.ok) {
-            document.location.replace('/profile');
+        document.location.replace('/header');
+        } else {
+        alert(response.statusText);
         }
     }
 };
