@@ -50,6 +50,6 @@ const signupHandler = async (event) => {
 };
 
 // add event listeners below
-document.querySelector('login-form').addEventListener('submit', loginHandler);
+document.querySelector('.login-form').addEventListener('submit', loginHandler);
 
-document.querySelector('signup-form').addEventListener('submit', signupHandler);
+document.querySelector('.signup-form').addEventListener('submit', signupHandler);
