@@ -2,67 +2,54 @@ const faker = require("@faker-js/faker");
 faker.setLocale('en_US');
 const Review = require("../models/Review");
 const User = require("../models/User");
-const mysql = require("mysql2");
-const db = mysql.createConnection(
-    {
-        host: 'localhost',
-        user: 'root',
-        // MySQL password
-        password: 'chicken',
-        database: 'etb_db'
-    },
-);
-let firstName = faker.name.firstName();
-let lastName = faker.name.lastName();
-let photo = faker.image.food();
-let noun = faker.word.noun();
-let adverb = faker.word.adverb();
-let adjective = faker.word.adjective();
-let interjection = faker.work.interjection();
-let randRating = faker.datatype.number({ max: 5 });
-let rEmail = faker.internet.email();
-let rPassword = faker.internet.password();
-let newUser;
-let newReview;
 
-async function createRandomUser () {
-    let user = await new User.init({
-        userName: {firstNamelastName},
-        firstName: {firstName},
-        lastName: {lastName},
-        email: {rEmail},
-        password: {rPassword}
+async function createRandomUser() {
+    let firstName = faker.name.firstName();
+    let lastName = faker.name.lastName();
+    let rPassword = faker.internet.password();
+    let rEmail = faker.internet.email();
+    let user = await new User.create({
+        userName: `${firstName}${lastName}`,
+        firstName: `${firstName}`,
+        lastName: `${ lastName }`,
+        email: `${ rEmail }`,
+        password: `${ rPassword }`
     });
-    newUser = [firstNamelastName,firstName,lastName,email,password];
     return user
 }
 
-async function createRandomReview () {
-let randReview = await
-`Reviewing: ${adjective} ${noun}
-By: ${firstName} ${lastName}
+async function createRandomReview(user) {
+    // Create faker data
+    let photo = faker.image.food();
+    let randRating1 = faker.datatype.number({ max: 5 });
+    let randRating2 = faker.datatype.number({ max: 5 });
+    let randRating3 = faker.datatype.number({ max: 5 });
+    let noun = faker.word.noun();
+    let adverb = faker.word.adverb();
+    let adjective = faker.word.adjective();
+    let interjection = faker.work.interjection();
+
+    let review = `Reviewing: ${adjective} ${noun}
+By: ${user.firstName} ${user.lastName}
 ${photo}
 The food was quite ${adverb} ${adjective}!
 ${interjection}
-${randRating}/5!!!
+${randRating3}/5!!!
 `;
-return randReview
+    Review.create({
+        reviewBody: `${ review }`,
+        foodRating: `${ randRating1 }`,
+        locationRating: `${ randRating2 }`,
+        overallRating: `${ randRating3}`,
+        userID: `${user.id}`
+    });
 }
 
-async function createRandomReview () {
-let PO = await new Review.init({
-    reviewBody: {createRandomReview},
-    foodRating: {randRating},
-    locationRating: {randRating},
-    overallRating: {randRating},
-});
-newReview = [createRandomReview, randRating, randRating, randRating];
-return PO;
+async function seed() {
+    // loop 5 times`
+    for(var i = 0 ; i > 5 ; i ++){
+    const user = createRandomUser();
+    createRandomReview(user);
+    }
 }
-
-db.query(`USE etb_db`);
-db.query(`INSERT INTO user(userName,firstName,lastName,email,password) VALUES(?,?,?,?,?)`,
-newUser);
-db.query(`INSERT INTO review(reviewBody,foodRating,locationRating,overallRating) VALUES(?,?,?,?)`,
-newReview);
-
+seed();
