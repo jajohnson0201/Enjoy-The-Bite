@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/jajohnson0201/Enjoy-The-Bite#readme",
   "dependencies": {
+    "@faker-js/faker": "github:faker-js/faker",
     "bcrypt": "^5.1.0",
     "cloudinary": "^1.33.0",
     "connect-session-sequelize": "^7.1.5",

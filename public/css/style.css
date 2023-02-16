@@ -1,1 +1,5 @@
-.bg{background: url('/images/Homepage.jpg') no-repeat; width: 100%; height: 100vh;}
+.bg {
+    background: url('/images/Homepage.jpg') no-repeat;
+    width: 100%;
+    height: 100vh;
+}
