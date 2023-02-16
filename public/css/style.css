@@ -27,11 +27,17 @@
     padding-top: 70px;
   }
 }
-
+.homepage{
+  background-image: url("/images/review.jpg");
+  background-size: cover; 
+}
 /* signup */
-body {
+.wrapper {
   background: url("/images/login.png");
-  background-size: cover; }
+  background-size: cover; 
+  max-width: 100%;
+  height: auto;
+}
 
 .wrapper {
   max-width: 1400px;
@@ -44,7 +50,7 @@ body {
 
 #wizard {
   position: relative;
-  background: #fff;
+  background: #6a4f4f;
   height: 554px;
   width: 738px;
   padding: 71px 93px 0;
@@ -80,7 +86,12 @@ body {
   .form-header .form-group {
     width: 100%; 
   }
-
+.avartar {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 50px;
+}
 .avartar-picker {
   padding-left: 15px;
   margin-top: 20px; }
@@ -102,7 +113,7 @@ body {
 .form-control {
   height: 46px;
   border: none;
-  background: #f7f7f7;
+  background: #6a4f4f;
   width: 100%;
   padding: 0 25px;
   border-radius: 23px;
@@ -186,7 +197,7 @@ body {
   background: transparent;
   border: none;
   height: 50px;
-  color: white !important;
+  color: rgb(15, 14, 14) !important;
   border: 1px solid transparent;
   background: rgba(255, 255, 255, 0.08);
   border-radius: 40px;

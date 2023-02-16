@@ -2,7 +2,7 @@
 const loginHandler = async (event) => {
 
     const email = document.querySelector('#email-login').value.trim();
-    const password = document.querySelector('#password-login').value.trim();
+    const password = document.querySelector('#password-field').value.trim();
 
     if (email && password) {
         const response = await fetch('/api/users/login', {
@@ -31,7 +31,7 @@ const signupHandler = async (event) => {
     const password = document.querySelector('#password-signup').value.trim();
 
     if (userName && email && password) {
-        const response = await fetch('api/users', {
+        const response = await fetch('/api/useRoutes', {
             method: 'POST',
             body: JSON.stringify({
                 userName,
@@ -44,7 +44,9 @@ const signupHandler = async (event) => {
         });
 
         if (response.ok) {
-            document.location.replace('/profile');
+        document.location.replace('/header');
+        } else {
+        alert(response.statusText);
         }
     }
 };
