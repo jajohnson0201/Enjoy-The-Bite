@@ -56,4 +56,10 @@ router.get('/signup', (req, res) => {
   res.render('signup');
 });
 
+router.get('/newPost', authurizeLog, (req, res) => {
+  res.render('newPost',{
+    logged_in: true
+  });
+});
+
 module.exports = router;
