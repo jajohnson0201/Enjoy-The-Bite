@@ -1,24 +1,24 @@
 const User = require("./User");
-const PostObject = require("./postObject");
+const Review = require("./Review");
 const Restaurant = require("./Restaurant");
 
-User.hasMany(PostObject, {
-    foreignKey: 'userID',
-    onDelete: 'CASCADE'
-  });
-  
-  PostObject.belongsTo(User, {
-    foreignKey: 'userID'
-  });
-  
-  Restaurant.hasMany(PostObject, {
-    foreignKey: 'restaurantID',
-    onDelete: 'CASCADE'
-  });
-  
-  PostObject.belongsTo(Restaurant, {
-    foreignKey: 'restaurantID'
-  });
-  
+User.hasMany(Review, {
+  foreignKey: 'userID',
+  onDelete: 'CASCADE'
+});
 
-module.exports = { PostObject, Restaurant, User };
+Review.belongsTo(User, {
+  foreignKey: 'userID'
+});
+
+Restaurant.hasMany(Review, {
+  foreignKey: 'restaurantID',
+  onDelete: 'CASCADE'
+});
+
+Review.belongsTo(Restaurant, {
+  foreignKey: 'restaurantID'
+});
+
+
+module.exports = { Review, Restaurant, User };
