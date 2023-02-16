@@ -1,4 +1,4 @@
-const faker = require("@faker-js/faker");
+const { faker } = require('@faker-js/faker');
 faker.setLocale('en_US');
 const Review = require("../models/Review");
 const User = require("../models/User");
@@ -8,7 +8,7 @@ async function createRandomUser() {
     let lastName = faker.name.lastName();
     let rPassword = faker.internet.password();
     let rEmail = faker.internet.email();
-    let user = await new User.create({
+    let user = await User.create({
         userName: `${firstName}${lastName}`,
         firstName: `${firstName}`,
         lastName: `${ lastName }`,
@@ -27,7 +27,7 @@ async function createRandomReview(user) {
     let noun = faker.word.noun();
     let adverb = faker.word.adverb();
     let adjective = faker.word.adjective();
-    let interjection = faker.work.interjection();
+    let interjection = faker.word.interjection();
 
     let review = `Reviewing: ${adjective} ${noun}
 By: ${user.firstName} ${user.lastName}
@@ -47,9 +47,10 @@ ${randRating3}/5!!!
 
 async function seed() {
     // loop 5 times`
-    for(var i = 0 ; i > 5 ; i ++){
-    const user = createRandomUser();
-    createRandomReview(user);
+    for(var i = 0 ; i < 5 ; i ++){
+        console.log(`creating user ${i}`)
+        const user = await createRandomUser();
+        createRandomReview(user);
     }
 }
 seed();
