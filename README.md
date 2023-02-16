@@ -60,13 +60,13 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
 
 [Brad Schoffman](https://github.com/bjschoffman)
 
-[Zaki. A]()
+[Zaki Ahmed]()
 
 ## License
 
 MIT License
 
-Copyright (c) 2023 liliaungurean
+Copyright (c) 2023
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

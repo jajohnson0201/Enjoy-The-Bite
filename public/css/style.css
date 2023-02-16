@@ -27,6 +27,28 @@
     padding-top: 70px;
   }
 }
+
+/* footer */
+.footer {
+  background: #5d7b81;
+  height: 100px;
+  font-family: 'Open Sans', sans-serif;
+  color: #FFFFFF;
+  padding: 20px;
+}
+
+.card{
+  align-items: center;
+}
+
+.revtext {
+  color: #80bdff;
+}
+.col{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin-left: 10px;
+  align-self: center;
+}
 .homepage{
   background-image: url("/images/review.jpg");
   background-size: cover; 
