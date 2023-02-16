@@ -3,7 +3,7 @@
     <h1  class="display-2 text-center text-light">New Post</h1>
     <div class="row justify-content-center">
       <div class="col-12 col-md-10 mb-3 p-4 bg-white">
-        <form>
+        <form class="new-project-form">
           {{!-- reasturant name --}}
           <div class="form-group">
             <label for="input">Restaurnat Name</label>
@@ -14,7 +14,7 @@
             <label class="control-label" for="rating">
               <span class="field-label-header">Rate the Food</span><br>
               <span class="field-label-info"></span>
-              <input type="hidden" id="selected_rating" name="selected_rating" value="" required="required">
+              <input type="hidden" id="food_rating" name="selected_rating" value="" required="required">
             </label>
             <h2 class="bold rating-header" style="">
               <span class="selected-rating">0</span><small> / 5</small>
@@ -40,7 +40,7 @@
             <label class="control-label" for="rating">
               <span class="field-label-header">Rate the Location</span><br>
               <span class="field-label-info"></span>
-              <input type="hidden" id="selected_rating" name="selected_rating" value="" required="required">
+              <input type="hidden" id="location_rating" name="selected_rating" value="" required="required">
             </label>
             <h2 class="bold rating-header" style="">
               <span class="selected-rating">0</span><small> / 5</small>
@@ -67,7 +67,7 @@
             <label class="control-label" for="rating">
               <span class="field-label-header">Overall Rate</span><br>
               <span class="field-label-info"></span>
-              <input type="hidden" id="selected_rating" name="selected_rating" value="" required="required">
+              <input type="hidden" id="overall_rating" name="selected_rating" value="" required="required">
             </label>
             <h2 class="bold rating-header" style="">
               <span class="selected-rating">0</span><small> / 5</small>
@@ -92,7 +92,7 @@
   {{!-- written review --}}
           <div class="form-group">
             <label for="ratereview">Restaurnat Review</label>
-            <textarea class="form-control" id="ratereview" rows="3"></textarea>
+            <textarea class="form-control" id="rate_review" rows="3"></textarea>
           </div>
 
   {{!-- back button --}}
