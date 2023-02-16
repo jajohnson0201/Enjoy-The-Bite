@@ -11,20 +11,29 @@ Review.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        userName: {
-            type: DataTypes.STRING,
-            allowNull: false
-        },
         reviewBody: {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        resaurantID: {
+        foodRating: {
             type: DataTypes.INTEGER,
             allowNull: false,
-            references: {
-                model: 'restaurant',
-                key: 'id',
+            validate: {
+                max: [5],
+            },
+        },
+        locationRating: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            validate: {
+                max: [5],
+            },
+        },
+        overallRating: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            validate: {
+                max: [5],
             },
         },
         userID: {
