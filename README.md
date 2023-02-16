@@ -42,13 +42,15 @@ In terminal Install the following;
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
+When the page is open the user will be presented with a list of recent reviews made by other users. 
+![homepage]()
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
+From there the user is able to either sign in 
+![login](./images/login.jpg)
 
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
+or create an account. 
+
+![signup](./images/signup.jpg)
 
 ## Credits/Contributions
 
@@ -89,5 +91,5 @@ SOFTWARE.
 
 ## Deployed-Link
 
-
-
+[GitHub Repo](https://github.com/jajohnson0201/Enjoy-The-Bite)
+[Enjoy The Bite]cd de   biit    et  
