@@ -1,5 +1,5 @@
 const User = require("./User");
-const PostObject = require("./postObject");
+const PostObject = require("./PostObject");
 const Restaurant = require("./Restaurant");
 
 User.hasMany(PostObject, {

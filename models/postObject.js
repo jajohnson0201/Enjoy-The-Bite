@@ -8,7 +8,8 @@ PostObject.init(
         postID: {
             type: DataTypes.INTEGER,
             allowNull: false,
-            primaryKey: true,
+            autoIncrement:true,
+            primaryKey: true
         },
         userID: {
             type: DataTypes.INTEGER,
@@ -26,7 +27,7 @@ PostObject.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        resaurantID: {
+        restaurantID: {
             type: DataTypes.INTEGER,
             allowNull: false,
             references: {
