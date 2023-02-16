@@ -1,22 +1,22 @@
 <div class="homepage">
    <h2 class="text-left p-5">Recent Reviews</h2>
-   {{#each Reviews as |Review|}} 
         <div class="row row-cols-1 row-cols-md-4 p-5">
 
+   {{#each reviews as |review|}} 
             <div class="col">
               <div class="card">
                 <div class="card-body">
-                  <h5 class="card-title">{{Review.restaurantName}}</h5>
-                  <p class="card-text">{{Review.reviewBody}}</p>
+                  <h5 class="card-title">{{review.restaurantName}}</h5>
+                  <p class="card-text">{{review.reviewBody}}</p>
                     <div class="row row-cols left">
-                        <div class="col text-center">Food: <br>{{Review.foodRating}}/5 &#11088;</br></div>
-                        <div class="col text-center">Location: <br>{{Review.locationRating}}/5 &#11088;</br></div>
-                        <div class="col text-center">Overall: <br>{{Review.overallRating}}/5 &#11088;</br></div>
+                        <div class="col text-center">Food: <br>{{review.foodRating}}/5 &#11088;</br></div>
+                        <div class="col text-center">Location: <br>{{review.locationRating}}/5 &#11088;</br></div>
+                        <div class="col text-center">Overall: <br>{{review.overallRating}}/5 &#11088;</br></div>
                     </div>
                 </div>
               </div>
             </div>
-        </div> 
         {{/each}} 
+        </div> 
 </div>
 
