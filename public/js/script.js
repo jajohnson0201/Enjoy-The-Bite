@@ -1,25 +1,69 @@
-jQuery(document).ready(function($){
-	    
-	$(".btnrating").on('click',(function(e) {
-	
-	var previous_value = $("#selected_rating").val();
-	
-	var selected_value = $(this).attr("data-attr");
-	$("#selected_rating").val(selected_value);
-	
-	$(".selected-rating").empty();
-	$(".selected-rating").html(selected_value);
-	
-	for (i = 1; i <= selected_value; ++i) {
-	$("#rating-star-"+i).toggleClass('btn-warning');
-	$("#rating-star-"+i).toggleClass('btn-default');
-	}
-	
-	for (ix = 1; ix <= previous_value; ++ix) {
-	$("#rating-star-"+ix).toggleClass('btn-warning');
-	$("#rating-star-"+ix).toggleClass('btn-default');
-	}
-	
+jQuery(document).ready(function ($) {
+
+	$(".btnrating3").on('click', (function (e) {
+
+		var previous_value = $("#selected_rating").val();
+
+		var selected_value = $(this).attr("data-attr");
+		$("#selected_rating").val(selected_value);
+
+		$("#rating3").empty();
+		$("#rating3").html(selected_value);
+
+		for (i = 1; i <= selected_value; ++i) {
+			$("#rating-star-" + i).toggleClass('btn-warning');
+			$("#rating-star-" + i).toggleClass('btn-default');
+		}
+
+		for (ix = 1; ix <= previous_value; ++ix) {
+			$("#rating-star-" + ix).toggleClass('btn-warning');
+			$("#rating-star-" + ix).toggleClass('btn-default');
+		}
+
 	}));
-	
+
+	$(".btnrating1").on('click', (function (e) {
+
+		var previous_value = $("#selected_rating").val();
+
+		var selected_value = $(this).attr("data-attr");
+		$("#selected_rating").val(selected_value);
+
+		$("#rating1").empty();
+		$("#rating1").html(selected_value);
+
+		for (i = 1; i <= selected_value; ++i) {
+			$("#rating-star-" + i).toggleClass('btn-warning');
+			$("#rating-star-" + i).toggleClass('btn-default');
+		}
+
+		for (ix = 1; ix <= previous_value; ++ix) {
+			$("#rating-star-" + ix).toggleClass('btn-warning');
+			$("#rating-star-" + ix).toggleClass('btn-default');
+		}
+
+	}));
+
+	$(".btnrating2").on('click', (function (e) {
+
+		var previous_value = $("#selected_rating").val();
+
+		var selected_value = $(this).attr("data-attr");
+		$("#selected_rating").val(selected_value);
+
+		$("#rating2").empty();
+		$("#rating2").html(selected_value);
+
+		for (i = 1; i <= selected_value; ++i) {
+			$("#rating-star-" + i).toggleClass('btn-warning');
+			$("#rating-star-" + i).toggleClass('btn-default');
+		}
+
+		for (ix = 1; ix <= previous_value; ++ix) {
+			$("#rating-star-" + ix).toggleClass('btn-warning');
+			$("#rating-star-" + ix).toggleClass('btn-default');
+		}
+
+	}));
+
 });
