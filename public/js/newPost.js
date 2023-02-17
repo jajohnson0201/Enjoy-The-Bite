@@ -19,6 +19,6 @@ const newFormHandler = async (event) => {
   };
   
   document
-    .querySelector('.new-project-form')
+    .querySelector('.save-review')
     .addEventListener('submit', newFormHandler);
   
