@@ -7,7 +7,6 @@ The user is able to get on the initial web page and will be greeted with a list 
 
 ## Table of Contents (Optional)
 
-If your README is long, add a table of contents to make it easy for users to find what they need.
 
 - [Installation](#installation)
 - [Usage](#usage)
@@ -40,10 +39,14 @@ In terminal Install the following;
 
 <br>
 
+    npm install @faker-js/faker
+
+<br>
+
 ## Usage
 
 When the page is open the user will be presented with a list of recent reviews made by other users. 
-![homepage]()
+![homepage](./images/homepage.jpg)
 
 From there the user is able to either sign in 
 ![login](./images/login.jpg)
@@ -51,6 +54,11 @@ From there the user is able to either sign in
 or create an account. 
 
 ![signup](./images/signup.jpg)
+
+once the user is logged in they are taken back to the homepage where they can now create a new post or logout if they are done.
+![after log in](./images/afterlogin.jpg)
+![New Post](./images/newpost.jpg)
+
 
 ## Credits/Contributions
 
@@ -92,4 +100,4 @@ SOFTWARE.
 ## Deployed-Link
 
 [GitHub Repo](https://github.com/jajohnson0201/Enjoy-The-Bite)
-[Enjoy The Bite]cd de   biit    et  
+[Enjoy The Bite](https://lit-wave-65693.herokuapp.com/)
