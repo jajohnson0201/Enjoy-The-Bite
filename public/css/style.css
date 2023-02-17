@@ -1,5 +1,11 @@
 /* response header */
-.btnrating {
+.btnrating1 {
+  background-color: #000;
+}
+.btnrating2 {
+  background-color: #000;
+}
+.btnrating3 {
   background-color: #000;
 }
 body {
