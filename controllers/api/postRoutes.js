@@ -3,7 +3,7 @@ const { Review } = require('../../models');
 const authurizeLog = require("../../utils/auth");
 
 //creating a new post with user id 
-router.post('/', authurizeLog , async (req, res) => {
+router.post('/' , async (req, res) => {
     try {
       const newPost = await Review.create({
         ...req.body,
@@ -12,6 +12,7 @@ router.post('/', authurizeLog , async (req, res) => {
       });
       res.status(200).json(newPost);
     } catch (err) {
+      console.log(err);
       res.status(400).json(err);
     }
   });
@@ -34,6 +35,16 @@ router.post('/', authurizeLog , async (req, res) => {
     } catch (err) {
       res.status(500).json(err);
     }
+});
+
+router.get('/',  async (req, res) => {
+  try {
+    const postData = await postObject.findAll();
+    res.status(200).json(postData);
+  } catch (err) {
+    console.log(err)
+    res.status(500).json(err);
+  }
 });
   
   module.exports = router;
